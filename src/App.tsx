@@ -4,8 +4,6 @@ import AppLayout from './layouts/components/AppLayout';
 import { primaryNavigationRoutes } from './layouts/contants';
 import Home from './home/Home';
 import Blog from './blog/Blog';
-import Register from './register/Register';
-import Login from './login/Login';
 
 const app = [
   {

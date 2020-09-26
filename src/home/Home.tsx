@@ -2,7 +2,6 @@ import React from 'react';
 import { Row, Col } from 'antd';
 import styled from 'styled-components';
 import { Typography } from '@material-ui/core';
-import { fresalabsPrimaryBlue } from '../colors';
 import Products from './Products';
 
 const GitContainer = styled.div`
