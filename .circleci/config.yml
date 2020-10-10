@@ -16,6 +16,7 @@ jobs:
           name: Deploying to GitHub Pages
           command: |
             npm install
+            npm install gh-pages --save-dev
             npm run deploy
 
 workflows:
