@@ -16,10 +16,5 @@ export const menuItems: MenuItem[] = [
     id: primaryNavigationRoutes.home,
     name: 'Home',
     path: () => primaryNavigationRoutes.home,
-  },
-  {
-    id: primaryNavigationRoutes.blog,
-    name: 'Blog',
-    path: () => primaryNavigationRoutes.blog,
-  },
+  }
 ];

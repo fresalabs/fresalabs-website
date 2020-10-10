@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { ChangeEvent } from 'react';
 import styled from 'styled-components';
 import { Row, Col } from 'antd';
 import { Input } from 'antd';
@@ -27,15 +27,38 @@ const Container = styled.div`
   background: black;
 `;
 
-class Footer extends React.Component {
+interface State {
+  message: string;
+}
+
+class Footer extends React.Component<any, State> {
+
+  constructor(props: any) {
+      super(props);
+      this.state = {
+          message: ''
+      };
+  }
+
+  handleMessageChange = (e: ChangeEvent<HTMLTextAreaElement>) => {
+    this.setState({message: e.target.value});
+  }
+
+  sendMessage = () => {
+    /**
+     * To send message here
+     */
+
+  }
+
   render() {
     return (
       <Container>
         <WaveBorder upperColor="#FFFFFF" lowerColor="#000000" animationNegativeDelay={4} />
         <Row>
           <StyledCol span={12}>
-            <TextArea rows={5} placeholder="Get in touch with us" />
-            <StyledButton>Send Message</StyledButton>
+            <TextArea rows={5} placeholder="Get in touch with us" onChange={this.handleMessageChange} />
+            <StyledButton onClick={this.sendMessage}>Send Message</StyledButton>
           </StyledCol>
           <StyledCol span={12}>
             <AboutTheCompany />
