@@ -1,13 +1,17 @@
 version: 2
 
-jobs:
-  deploy_website:
-    docker:
-      # specify the version you desire here
-      - image: circleci/node:8.11.1
+defaults: &defaults
+  working_directory: ~/repo
+  docker:
+    - image: circleci/node:10.15.1
 
+jobs:
+  deploy:
+    <<: *defaults
     steps:
       - checkout
+      - attach_workspace:
+          at: ~/repo
       - run:
           name: Deploying to GitHub Pages
           command: |
@@ -16,10 +20,12 @@ jobs:
 
 workflows:
   version: 2
-  build_and_deploy:
+  test-deploy:
     jobs:
-      - deploy_website:
+      - deploy:
+          requires:
+            - test
           filters:
             branches:
               only:
-                - /releases-*-next/
+                - /releases-.*-next/
