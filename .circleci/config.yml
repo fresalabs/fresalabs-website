@@ -15,7 +15,7 @@ jobs:
       - run:
           name: Deploying to GitHub Pages
           command: |
-            npm run install
+            npm install
             npm run deploy
 
 workflows:
