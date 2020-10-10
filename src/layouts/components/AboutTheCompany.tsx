@@ -23,7 +23,7 @@ class AboutTheCompany extends React.Component {
     return (
       <div>
         <Header>About the Company</Header>
-        <Description>FresaLabs is open source software company</Description>
+        <Description>FresaLabs is software for everyone.</Description>
       </div>
     );
   }
