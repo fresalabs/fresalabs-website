@@ -10,6 +10,9 @@ jobs:
     <<: *defaults
     steps:
       - checkout
+      - add_ssh_keys:
+          fingerprints:
+            - "0e:e8:97:aa:ee:44:6f:26:b8:8a:b5:79:bd:d4:b8:47"
       - attach_workspace:
           at: ~/repo
       - run:
