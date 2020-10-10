@@ -1,26 +1,29 @@
 version: 2
-jobs:
-  deploy-website:
-    docker:
-      # specify the version you desire here
-      - image: circleci/node:8.11.1
 
+defaults: &defaults
+  working_directory: ~/repo
+  docker:
+    - image: circleci/node:10.15.1
+
+jobs:
+  deploy:
+    <<: *defaults
     steps:
       - checkout
+      - attach_workspace:
+          at: ~/repo
       - run:
           name: Deploying to GitHub Pages
           command: |
-            export CIRCLE_PROJECT_REPONAME=fresalabs
-            git config --global user.email "mohithgm@gmail.com"
-            git config --global user.name "mohithg"
-            echo "machine github.com login mohithg password $GITHUB_TOKEN" > ~/.netrc
-            cd website && npm install && GIT_USER=mohithg npm run publish-gh-pages
+            npm run install
+            npm run deploy
+
 workflows:
   version: 2
-  build_and_deploy:
+  test-deploy:
     jobs:
-      - deploy-website:
+      - deploy:
           filters:
             branches:
               only:
-                - /releases-*-next/
+                - /releases-.*-next/
