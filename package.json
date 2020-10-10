@@ -51,7 +51,7 @@
     "eject": "react-app-rewired eject",
     "lint:fix": "eslint --fix './src/**/*.{ts,tsx}'",
     "storybook": "start-storybook -p 9009 -s public",
-    "predeploy": "npm run build && cp CNAME build/CNAME && cp 404.html build/404.html",
+    "predeploy": "npm run build && cp CNAME build/CNAME && cp src/404.html build/404.html",
     "deploy": "gh-pages -d build",
     "build-storybook": "build-storybook -s public"
   },
