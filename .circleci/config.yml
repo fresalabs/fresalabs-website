@@ -12,6 +12,7 @@ jobs:
           command: |
             npm run install
             npm run deploy
+
 workflows:
   version: 2
   build_and_deploy:
