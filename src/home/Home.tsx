@@ -19,14 +19,15 @@ const IntroductionContainer = styled(Row)`
   background-color: white;
 `;
 
-class Home extends React.Component<{}> {
+class Home extends React.Component<any, any> {
+
   render() {
     return (
       <div>
         <GitContainer>
           <IntroductionContainer>
             <Col>
-              <Typography variant="h3">FresaLabs is open source software company</Typography>
+              <Typography variant="h3">FresaLabs is software for everyone</Typography>
             </Col>
           </IntroductionContainer>
         </GitContainer>
