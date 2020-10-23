@@ -6,6 +6,7 @@ import StarIcon from '@material-ui/icons/Star';
 import GitHubIcon from '@material-ui/icons/GitHub';
 import FavoriteIcon from '@material-ui/icons/Favorite';
 import { Typography } from '@material-ui/core';
+import GetAppIcon from '@material-ui/icons/GetApp';
 import ProductsHuntIcon from './producthunt.png';
 import NpmIcon from './npm.png';
 import ClipBoardX from '../icons/ClipboardXIcon';
@@ -40,6 +41,7 @@ interface Product {
   productsHuntLink?: string;
   npmLink?: string;
   gumroadLink?: string;
+  downLoadLink?: string;
   icon: React.ReactNode;
 }
 
@@ -69,6 +71,7 @@ const products: Product[] = [
     description: 'The fastest and easiest way to check, copy and edit CSS.',
     productsHuntLink: 'https://www.producthunt.com/posts/css-spider',
     gumroadLink: 'https://gumroad.com/l/CpAKX',
+    downLoadLink: 'https://chrome.google.com/webstore/detail/css-spider/eneakgbflmejjpkogbdmebjbfcdebjik?hl=en&authuser=1',
     icon: <CSSSpiderIcon />,
   },
 ];
@@ -118,6 +121,13 @@ class Products extends React.Component {
                     <a key="npm" href={product.gumroadLink}>
                       <FavoriteIcon />
                     </a>
+                    </Tooltip>
+                  ),
+                  product.downLoadLink && (
+                    <Tooltip title="Download">
+                      <a key="npm" href={product.downLoadLink}>
+                        <GetAppIcon />
+                      </a>
                     </Tooltip>
                   ),
                 ])}
