@@ -6,6 +6,7 @@ import Footer from './Footer';
 const Container = styled.div`
   height: 100%;
   overflow-x: hidden;
+  padding-top: 56px; /* offset for fixed toolbar */
 `;
 
 const ContentContainer = styled.div`

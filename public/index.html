@@ -9,6 +9,8 @@
       content="FresaLabs is software for everyone"
     />
     <meta name="keywords" content="Fresalabs, Sleek Form, CSS Spider, ClipboardX, CSS-Spider, Software">
+    <meta name="robots" content="index,follow" />
+    <link rel="canonical" href="https://www.fresalabs.com/" />
     <link rel="icon" href="/FresaLabs.png">
     <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" />
@@ -18,6 +20,19 @@
       user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
     -->
     <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="FresaLabs — Software for everyone" />
+    <meta property="og:description" content="Reliable, privacy‑respectful apps for everyday life. We listen to real problems and build software for everyone." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://www.fresalabs.com/" />
+    <meta property="og:image" content="https://www.fresalabs.com/FresaLabs.png" />
+    
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="FresaLabs — Software for everyone" />
+    <meta name="twitter:description" content="Reliable, privacy‑respectful apps for everyday life." />
+    <meta name="twitter:image" content="https://www.fresalabs.com/FresaLabs.png" />
     <!--
       Notice the use of %PUBLIC_URL% in the tags above.
       It will be replaced with the URL of the `public` folder during the build.
@@ -27,7 +42,7 @@
       work correctly both with client-side routing and a non-root public URL.
       Learn how to configure a non-root public URL by running `npm run build`.
     -->
-    <title>FresaLabs</title>
+    <title>FresaLabs — Software for everyone</title>
 
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-JWBR9E30QX"></script>
@@ -36,6 +51,22 @@
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
       gtag('config', 'G-JWBR9E30QX');
+    </script>
+
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "FresaLabs",
+        "url": "https://www.fresalabs.com/",
+        "logo": "https://www.fresalabs.com/FresaLabs.png",
+        "sameAs": [
+          "https://github.com/fresalabs"
+        ],
+        "slogan": "Software for everyone",
+        "email": "admin@fresalabs.com"
+      }
     </script>
 
   </head>

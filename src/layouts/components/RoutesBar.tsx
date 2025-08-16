@@ -1,5 +1,5 @@
 import React from 'react';
-import Button from '@material-ui/core/Button';
+import { Button } from 'antd';
 import styled from 'styled-components';
 import * as R from 'ramda';
 import { menuItems } from '../contants';
@@ -21,10 +21,8 @@ const Selected = styled.div<{ selected: boolean } & React.HTMLProps<HTMLDivEleme
 `;
 
 const StyledButton = styled(Button)`
-  &.MuiButton-textPrimary {
+  &.ant-btn-link {
     color: yellow;
-  }
-  .MuiButton-label {
     font-size: 16px;
     font-weight: 500;
   }
@@ -36,8 +34,12 @@ class RoutesBar extends React.Component {
       <Container>
         {R.map(
           (item) => (
-            <Selected selected={history.location.pathname === item.path()} onClick={() => history.push(item.path())}>
-              <StyledButton color="primary">{item.name}</StyledButton>
+            <Selected
+              key={item.id}
+              selected={history.location.pathname === item.path()}
+              onClick={() => history.push(item.path())}
+            >
+              <StyledButton type="link">{item.name}</StyledButton>
             </Selected>
           ),
           menuItems

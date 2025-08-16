@@ -1,59 +1,22 @@
 import React from 'react';
-import MenuItem from '@material-ui/core/MenuItem';
-import Menu from '@material-ui/core/Menu';
-import AccountCircle from '@material-ui/icons/AccountCircle';
-import IconButton from '@material-ui/core/IconButton';
+import { Menu, Dropdown } from 'antd';
+import { UserOutlined } from '@ant-design/icons';
 
-interface ProfileMenuState {
-  isMenuOpen: boolean;
-  anchorEl: null | HTMLElement;
-}
-
-class ProfileMenu extends React.Component<{}, ProfileMenuState> {
-  constructor(props: {}) {
-    super(props);
-    this.state = {
-      isMenuOpen: false,
-      anchorEl: null,
-    };
-  }
-  handleMenuClose = () => {
-    this.setState({ anchorEl: null, isMenuOpen: false });
-  };
-
-  handleProfileMenuOpen = (event: React.MouseEvent<HTMLElement>) => {
-    this.setState({ anchorEl: event.currentTarget, isMenuOpen: true });
-  };
-
-  renderMenu = () => {
-    const { isMenuOpen, anchorEl } = this.state;
-    return (
-      <Menu
-        anchorEl={anchorEl}
-        anchorOrigin={{ vertical: 'top', horizontal: 'right' }}
-        keepMounted={false}
-        transformOrigin={{ vertical: 'top', horizontal: 'right' }}
-        open={isMenuOpen}
-        onClose={this.handleMenuClose}
-      >
-        <MenuItem onClick={this.handleMenuClose}>Profile</MenuItem>
-        <MenuItem onClick={this.handleMenuClose}>My account</MenuItem>
-      </Menu>
-    );
-  };
+class ProfileMenu extends React.Component {
+  renderMenu = () => (
+    <Menu>
+      <Menu.Item key="profile">Profile</Menu.Item>
+      <Menu.Item key="account">My account</Menu.Item>
+    </Menu>
+  );
   render() {
     return (
       <React.Fragment>
-        <IconButton
-          edge="end"
-          aria-label="account of current user"
-          aria-haspopup="true"
-          onClick={this.handleProfileMenuOpen}
-          color="inherit"
-        >
-          <AccountCircle />
-        </IconButton>
-        {this.renderMenu()}
+        <Dropdown overlay={this.renderMenu()} trigger={['click']} placement="bottomRight">
+          <a onClick={(e) => e.preventDefault()} aria-label="account of current user">
+            <UserOutlined style={{ fontSize: 24, color: 'white' }} />
+          </a>
+        </Dropdown>
       </React.Fragment>
     );
   }

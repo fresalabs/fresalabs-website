@@ -1,48 +1,59 @@
 import React from 'react';
-import { AppBar, Toolbar } from '@material-ui/core';
-import Grid from '@material-ui/core/Grid';
 import styled from 'styled-components';
 import FresLabsIcon from '../../icons/FresLabsIcon';
 import RoutesBar from './RoutesBar';
+import history from '../../history';
 
-const StyledToolBar = styled(Toolbar)`
-  display: flex;
-`;
-
-const StyledAppBar = styled(AppBar)`
-  height: 5%;
+const Bar = styled.div`
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
   width: 100%;
-  .MuiToolbar-root {
-    align-items: initial;
-    background: black;
-  }
-  .MuiToolbar-regular {
-    padding: 0 16px;
-    .MuiGrid-align-items-xs-center {
-      flex-direction: row;
-    }
-  }
+  background: black;
+  z-index: 1000;
 `;
 
-const StyledGrid = styled(Grid)``;
+const Inner = styled.div`
+  display: flex;
+  align-items: center;
+  padding: 0 16px;
+  height: 56px;
+`;
 
-const Actions = styled(Grid)`
-  flex-basis: 33%;
+const Left = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex: 1;
+`;
+
+const Actions = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  flex: 1;
+`;
+
+const LogoWrapper = styled.div`
+  cursor: pointer;
 `;
 
 class FreesaLabsToolBar extends React.Component {
   render() {
     return (
-      <StyledAppBar position="fixed">
-        <StyledToolBar>
-          <StyledGrid container={true} justify="flex-start" alignItems="center">
-            <FresLabsIcon />
-          </StyledGrid>
-          <Actions justify="flex-end" direction="row" alignItems="center" container={true}>
+      <Bar>
+        <Inner>
+          <Left>
+            <LogoWrapper onClick={() => history.push('/home')} aria-label="FresaLabs Home">
+              <FresLabsIcon />
+            </LogoWrapper>
+          </Left>
+          <Actions>
             <RoutesBar />
           </Actions>
-        </StyledToolBar>
-      </StyledAppBar>
+        </Inner>
+      </Bar>
     );
   }
 }

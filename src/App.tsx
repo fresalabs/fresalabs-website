@@ -4,6 +4,10 @@ import AppLayout from './layouts/components/AppLayout';
 import { primaryNavigationRoutes } from './layouts/contants';
 import Home from './home/Home';
 import Blog from './blog/Blog';
+import Apps from './apps/Apps';
+import Support from './support/Support';
+import Privacy from './legal/Privacy';
+import Terms from './legal/Terms';
 
 const app = [
   {
@@ -12,9 +16,29 @@ const app = [
     component: Home,
   },
   {
+    path: primaryNavigationRoutes.apps,
+    exact: true,
+    component: Apps,
+  },
+  {
     path: primaryNavigationRoutes.blog,
     exact: true,
     component: Blog,
+  },
+  {
+    path: primaryNavigationRoutes.support,
+    exact: true,
+    component: Support,
+  },
+  {
+    path: primaryNavigationRoutes.privacy,
+    exact: true,
+    component: Privacy,
+  },
+  {
+    path: primaryNavigationRoutes.terms,
+    exact: true,
+    component: Terms,
   },
 ];
 

@@ -1,8 +1,8 @@
 import React from 'react';
-import { Row, Col } from 'antd';
+import { Row, Col, Typography, Button } from 'antd';
 import styled from 'styled-components';
-import { Typography } from '@material-ui/core';
 import Products from './Products';
+import history from '../history';
 
 const GitContainer = styled.div`
   display: flex;
@@ -20,14 +20,21 @@ const IntroductionContainer = styled(Row)`
 `;
 
 class Home extends React.Component<any, any> {
-
   render() {
     return (
       <div>
         <GitContainer>
           <IntroductionContainer>
             <Col>
-              <Typography variant="h3">FresaLabs is software for everyone</Typography>
+              <Typography.Title level={3}>FresaLabs is software for everyone</Typography.Title>
+              <Typography.Paragraph style={{ marginTop: 12, color: '#666' }}>
+                We listen to real-world problems and build reliable, privacy‑respectful apps that help people every day.
+              </Typography.Paragraph>
+              <div style={{ marginTop: 20 }}>
+                <Button type="primary" onClick={() => history.push('/apps')}>
+                  Explore Android Apps
+                </Button>
+              </div>
             </Col>
           </IntroductionContainer>
         </GitContainer>

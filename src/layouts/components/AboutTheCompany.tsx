@@ -23,7 +23,10 @@ class AboutTheCompany extends React.Component {
     return (
       <div>
         <Header>About the Company</Header>
-        <Description>FresaLabs is software for everyone.</Description>
+        <Description>
+          FresaLabs builds simple, reliable software for everyone. We listen to real problems from the public and create
+          privacy‑respectful apps that help large groups in their everyday life.
+        </Description>
       </div>
     );
   }
