@@ -1,4 +1,5 @@
 # https://www.robotstxt.org/robotstxt.html
 User-agent: *
-Disallow:
-Sitemap: https://www.fresalabs.com/sitemap.xml
+Allow: /
+
+Sitemap: https://fresalabs.com/sitemap.xml
