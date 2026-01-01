@@ -15,14 +15,14 @@ const inter = Inter({
 export const metadata: Metadata = {
   title: 'FresaLabs — Software for Everyone',
   description: 'We listen to real-world problems and build reliable, privacy-respectful apps that help people every day.',
-  metadataBase: new URL('https://fresalabs.com'),
+  metadataBase: new URL('https://www.fresalabs.com'),
   keywords: ['FresaLabs', 'Sleek Form', 'CSS Spider', 'ClipboardX', 'Software', 'Apps', 'Developer Tools'],
   authors: [{ name: 'FresaLabs' }],
   creator: 'FresaLabs',
   openGraph: {
     type: 'website',
     locale: 'en_US',
-    url: 'https://fresalabs.com',
+    url: 'https://www.fresalabs.com',
     siteName: 'FresaLabs',
     title: 'FresaLabs — Software for Everyone',
     description: 'Reliable, privacy-respectful apps for everyday life. We listen to real problems and build software for everyone.',
@@ -53,7 +53,7 @@ export const metadata: Metadata = {
     shortcut: '/favicon.svg',
   },
   alternates: {
-    canonical: 'https://fresalabs.com/',
+    canonical: 'https://www.fresalabs.com/',
   },
 }
 
@@ -61,8 +61,8 @@ const structuredData = {
   '@context': 'https://schema.org',
   '@type': 'Organization',
   name: 'FresaLabs',
-  url: 'https://fresalabs.com/',
-  logo: 'https://fresalabs.com/logo.png',
+  url: 'https://www.fresalabs.com/',
+  logo: 'https://www.fresalabs.com/logo.png',
   sameAs: ['https://github.com/fresalabs'],
   slogan: 'Software for everyone',
   email: 'admin@fresalabs.com',
