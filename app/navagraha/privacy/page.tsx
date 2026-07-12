@@ -28,25 +28,36 @@ export default function NavagrahaPrivacyPage() {
         <div className="prose prose-lg prose-gray max-w-none">
           <div className="bg-leaf-50 border border-leaf-200 rounded-2xl p-6 mb-8">
             <p className="text-leaf-700 font-medium m-0">
-              TL;DR: Navagraha collects no personal data, has no account or login,
-              works fully offline, shows no ads, and never sends your information
-              anywhere. Everything stays on your device.
+              TL;DR: Navagraha has no account or login and your practices stay on
+              your device. We collect no personal data ourselves. The app does show
+              ads (Google AdMob) on its browse screens — never while you are reading
+              a stotra or doing japa — and the ad provider uses a device advertising
+              identifier to serve them.
             </p>
           </div>
 
           <p className="text-xl text-gray-600 mb-8">
             Navagraha is an offline-first devotional app for reading Navagraha
             stotras and keeping daily practices. We designed it so that your
-            devotion stays entirely private to you.
+            devotion stays private to you, and the app is supported by ads shown
+            outside of the reading experience.
           </p>
 
           <h2 className="text-2xl font-bold text-gray-800 mt-12 mb-4">
             Information We Collect
           </h2>
           <p className="text-gray-600 mb-4">
-            <strong>None.</strong> Navagraha does not collect, transmit, or store
-            any personal information on any server. There is no account, no sign-in,
-            and no user profile.
+            <strong>FresaLabs collects nothing.</strong> We do not operate any
+            server, account or profile for Navagraha, and none of your practices,
+            preferences or activity are sent to us.
+          </p>
+          <p className="text-gray-600 mb-4">
+            The one exception is advertising: to keep the app free, Navagraha shows
+            ads through Google AdMob. To serve and measure those ads, Google
+            collects a device <strong>advertising identifier</strong> and standard
+            technical data (such as device model, coarse region, and IP address).
+            This is handled by Google, not by us — see the &ldquo;Advertising&rdquo;
+            section below.
           </p>
 
           <h2 className="text-2xl font-bold text-gray-800 mt-12 mb-4">
@@ -76,23 +87,44 @@ export default function NavagrahaPrivacyPage() {
           </p>
 
           <h2 className="text-2xl font-bold text-gray-800 mt-12 mb-4">
+            Advertising
+          </h2>
+          <p className="text-gray-600 mb-4">
+            Navagraha is free and supported by ads served through{' '}
+            <strong>Google AdMob</strong>. To respect the reading experience, ads
+            appear only on the browse screens (Today, Grahas, You) and occasionally
+            at app open — <strong>never</strong> on a stotra reader screen or the
+            japa counter.
+          </p>
+          <p className="text-gray-600 mb-4">
+            To serve ads, Google may collect and process a device advertising ID and
+            technical/usage data as described in{' '}
+            <a href="https://policies.google.com/technologies/ads" className="text-fresa-500 hover:text-fresa-600" target="_blank" rel="noreferrer">
+              Google&apos;s advertising policy
+            </a>
+            . We request non-personalised ads where possible. You can reset or delete
+            your advertising ID, and limit ad personalisation, in your Android
+            settings under <em>Settings → Privacy → Ads</em>.
+          </p>
+
+          <h2 className="text-2xl font-bold text-gray-800 mt-12 mb-4">
             Network Use
           </h2>
           <p className="text-gray-600 mb-4">
-            All stotra texts ship inside the app and are read offline. The app does
-            not require an internet connection to function. Tapping a temple&apos;s
-            &ldquo;Open in Maps&rdquo; simply hands the temple name to your maps app;
-            Navagraha itself makes no network requests with your data.
+            All stotra texts ship inside the app and are read offline; the reading
+            experience needs no internet connection. The app connects to the network
+            only to fetch ads. Tapping a temple&apos;s &ldquo;Open in Maps&rdquo;
+            simply hands the temple name to your maps app.
           </p>
 
           <h2 className="text-2xl font-bold text-gray-800 mt-12 mb-4">
             What We Never Do
           </h2>
           <ul className="text-gray-600 space-y-2 mb-8">
-            <li>No analytics or usage tracking</li>
-            <li>No advertising or ad identifiers</li>
-            <li>No selling or sharing of data — there is no data to sell</li>
-            <li>No accounts, no cloud sync, no third-party SDKs that collect data</li>
+            <li>No accounts, no login, no cloud sync of your practices</li>
+            <li>No first-party analytics or profiling by FresaLabs</li>
+            <li>We never sell your data</li>
+            <li>No ads or tracking on the reader or japa screens</li>
           </ul>
 
           <h2 className="text-2xl font-bold text-gray-800 mt-12 mb-4">
@@ -109,7 +141,9 @@ export default function NavagrahaPrivacyPage() {
             Children&apos;s Privacy
           </h2>
           <p className="text-gray-600 mb-4">
-            Navagraha collects no data from anyone, including children.
+            Navagraha is a general-audience app and is not directed at children. We
+            do not knowingly collect personal information from children, and request
+            non-personalised ads where possible.
           </p>
 
           <h2 className="text-2xl font-bold text-gray-800 mt-12 mb-4">
