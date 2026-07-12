@@ -42,6 +42,20 @@ interface Product {
 
 const products: Product[] = [
   {
+    id: 'navagraha',
+    name: 'Navagraha',
+    tagline: 'Read the nine-graha stotras every day — in your own script',
+    description:
+      'An offline-first devotional app to read Navagraha stotras in your own script (Telugu, Devanagari, Tamil, Kannada, IAST), keep daily practices and sankalpa vows with reminders, and explore each graha’s remedies and temples. All texts are public-domain; everything works offline.',
+    category: 'android',
+    icon: Smartphone,
+    gradient: 'from-amber-400 via-yellow-500 to-orange-600',
+    url: 'https://play.google.com/store/apps/details?id=com.fresalabs.navagraha',
+    featured: true,
+    stats: { rating: 'New' },
+    tags: ['Devotional', 'Offline', 'Multi-script'],
+  },
+  {
     id: 'css-spider',
     name: 'CSS Spider',
     tagline: 'Inspect any website\'s CSS with a click',
